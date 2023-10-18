@@ -1,0 +1,108 @@
+@import '../../scss/_variables';
+
+.page-hero {
+    position: relative;
+    padding: $padding-x-desktop;
+    @media (max-width: 767px) {
+        padding-right: $padding-x-mobile;
+        padding-left: $padding-x-mobile;
+    }
+
+    &__container {
+        padding: 60px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        background-image: url('./img/hero.png');
+        background-color: $bc-secondary;
+        background-position: right top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width: 767px) {
+            background-image: none;
+            text-align: center;
+        }
+        @media (max-width: 567px) {
+            padding-right: $padding-x-mobile;
+            padding-left: $padding-x-mobile;
+        }
+    }
+    &__text-container {
+        width: 350px;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        a {
+            text-align: center;
+            width: 250px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-family: 'Inter', system-ui;
+            font-size: 0.8em;
+            font-weight: normal;
+            line-height: 1.3;
+            border-radius: 10px;
+
+            @media (max-width: 576px) {
+                font-size: 12px;
+                width: 100%;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 36px;
+        margin-bottom: 56px;
+        span {
+            color: $hero-blue-text;
+        }
+        @media (max-width: 576px) {
+            font-size: 30px;
+        }
+    }
+
+    &__trusted {
+        display: flex;
+        align-items: center;
+        padding: 40px 60px;
+        gap: 10px;
+        border-radius: 20px;
+        background-color: $bc-secondary;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        @media (max-width: 567px) {
+            padding-right: $padding-x-mobile;
+            padding-left: $padding-x-mobile;
+        }
+
+        &-logo {
+            display: flex;
+            justify-content: space-around;
+            gap: 5px;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-grow: 1;
+
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+        }
+
+        &-text {
+            opacity: 0.8;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+    }
+    &__logo {
+        max-height: 40px;
+        @media (max-width: 767px) {
+            max-height: 30px;
+            max-width: 40%;
+        }
+        @media (max-width: 576px) {
+            max-height: 21px;
+        }
+    }
+}
